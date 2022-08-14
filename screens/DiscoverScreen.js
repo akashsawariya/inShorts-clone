@@ -19,7 +19,12 @@ const DiscoverScreen = () => {
   const { setCategory, setSource, darkTheme } = useContext(NewsContext);
 
   return (
-    <View style={styles.discover}>
+    <View
+      style={{
+        ...styles.discover,
+        backgroundColor: darkTheme ? "#282C35" : "#fff",
+      }}
+    >
       <Search />
       <Text
         style={{ ...styles.subtitle, color: darkTheme ? "white" : "black" }}
@@ -107,6 +112,7 @@ const styles = StyleSheet.create({
     flexWrap: "wrap",
     justifyContent: "space-around",
     paddingVertical: 15,
+    paddingBottom: 170,
   },
   sourceContainer: {
     height: 150,
